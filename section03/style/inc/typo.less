@@ -1,0 +1,27 @@
+@import 'mixins/typo';
+
+
+// ---------------
+// Font face
+@font-face {
+	.font-face(@typo-name, normal, normal, '@{typo-path}@{typo}');
+}
+
+@font-face {
+	.font-face(@typo-name, normal, bold, '@{typo-path}@{typo-italic}');
+}
+
+@font-face {
+	.font-face(@typo-name, normal, lighter, '@{typo-path}@{typo-light}');
+}
+
+@font-face {
+	.font-face(@typo-name, italic, normal, '@{typo-path}@{typo-bold}');
+}
+
+@font-face {
+	.font-face(@typo-name, italic, bold, '@{typo-path}@{typo-bold-italic}');
+}
+
+
+

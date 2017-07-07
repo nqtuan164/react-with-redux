@@ -1,0 +1,81 @@
+// ---------------
+// Image block
+/** Pug sameple
+
+
+ */
+.image-box {
+	position: relative;
+	overflow: hidden;
+	&:before {
+		content: "";
+		display: block;
+		padding-top: 100%; /* initial ratio of 1:1*/
+	}
+	.image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+		background-size: cover;
+		background-position: center;
+	}
+	&.ratio-1-1:before {
+		padding-top: 100%;
+	}
+	&.ratio-2-1:before {
+		padding-top: 50%;
+	}
+	&.ratio-1-2:before {
+		padding-top: 200%;
+	}
+	&.ratio-4-3:before {
+		padding-top: 75%;
+	}
+	&.ratio-5-3:before {
+		padding-top: 60%;
+	}
+	&.ratio-16-9:before {
+		padding-top: 56.25%;
+	}
+}
+
+// ---------------
+// Equal columns for Bootstrap
+/** Pug sameple
+
+
+ */
+.row-equal {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.row-equal > div[class*='col-'] {
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+
+// ---------------
+// Transformation for link look like magically
+.transition(@arguments) {
+	-webkit-transition: @arguments;
+	-moz-transition: @arguments;
+	-ms-transition: @arguments;
+	-o-transition: @arguments;
+	transition: @arguments;
+}
+
+.transition-slow {
+	.transition(@trans-arguments);
+}
+
+
+
+
+

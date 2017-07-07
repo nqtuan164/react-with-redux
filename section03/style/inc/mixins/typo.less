@@ -1,0 +1,9 @@
+.font-face(@name, @style, @weight, @file) when not (@name = ''), (@file = '') {
+	font-family: @name;
+	src: url('@{file}.eot');
+	src: url('@{file}.eot?#iefix') format('embedded-opentype'),
+	url('@{file}.svg') format('svg'),
+	url('@{file}.ttf') format('truetype');
+	font-style: @style;
+	font-weight: @weight;
+}
